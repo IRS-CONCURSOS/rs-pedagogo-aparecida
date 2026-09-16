@@ -658,69 +658,278 @@
   line-height: 1.6;
 }
 
-/* GRADE DE DISCIPLINAS */
+/* ===================== GRADE DE DISCIPLINAS (PREMIUM REDESIGN) ===================== */
 #rs-pedagogo .rs-grade {
   display: grid;
-  grid-template-columns: 0.85fr 1.15fr;
-  gap: 90px;
+  grid-template-columns: 420px 1fr;
+  gap: 60px;
+  align-items: start;
 }
 
-#rs-pedagogo .rs-grade > div > p:not(.rs-eyebrow) {
-  margin-top: 24px;
+#rs-pedagogo .rs-grade-aside {
+  position: sticky;
+  top: 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#rs-pedagogo .rs-grade-lead,
+#rs-pedagogo .rs-grade-benefits,
+#rs-pedagogo .rs-grade-cta {
+  width: 100%;
+}
+
+#rs-pedagogo .rs-grade-lead {
   font-size: 1.05rem;
   color: var(--ink);
+  line-height: 1.6;
+  margin-top: 18px;
+  margin-bottom: 24px;
 }
 
-#rs-pedagogo .rs-muted {
-  font-size: 0.85rem;
-  color: var(--ink-light);
-  max-width: 360px;
-  margin-top: 20px !important;
-}
-
-#rs-pedagogo .rs-subjects article {
+#rs-pedagogo .rs-grade-benefits {
   display: flex;
-  gap: 20px;
-  align-items: center;
-  padding: 18px 22px;
-  background: #ffffff;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 26px;
+}
+
+#rs-pedagogo .rs-gb-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 14px 16px;
+  background: var(--bg-white);
   border: 1px solid var(--line);
   border-radius: 14px;
-  margin-bottom: 12px;
-  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
-  transition: border-color 0.2s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+  transition: all 0.2s ease;
 }
 
-#rs-pedagogo .rs-subjects article:hover {
-  border-color: var(--teal);
+#rs-pedagogo .rs-gb-item:hover {
+  border-color: var(--teal-border);
   transform: translateX(4px);
+  box-shadow: 0 6px 16px rgba(13, 148, 136, 0.08);
 }
 
-#rs-pedagogo .rs-subjects span {
+#rs-pedagogo .rs-gb-item-spec {
+  background: linear-gradient(135deg, #ffffff 0%, #fffdf5 100%);
+  border-color: var(--gold-border);
+  border-left: 4px solid var(--gold-vibrant);
+}
+
+#rs-pedagogo .rs-gb-item-spec:hover {
+  border-color: var(--gold-vibrant);
+  border-left-color: var(--gold-vibrant);
+  box-shadow: 0 6px 16px rgba(217, 119, 6, 0.12);
+}
+
+#rs-pedagogo .rs-gb-icon {
+  font-size: 1.25rem;
+  line-height: 1;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+#rs-pedagogo .rs-gb-item strong {
+  display: block;
+  font-size: 0.92rem;
+  color: var(--navy);
+  font-weight: 800;
+  margin-bottom: 2px;
+}
+
+#rs-pedagogo .rs-gb-item p {
+  font-size: 0.82rem;
+  color: var(--ink-light);
+  line-height: 1.45;
+  margin: 0;
+}
+
+#rs-pedagogo .rs-grade-cta .rs-button {
+  display: inline-flex;
+  margin-bottom: 14px;
+  width: 100%;
+  justify-content: center;
+}
+
+#rs-pedagogo .rs-grade-aside .rs-muted {
+  font-size: 0.82rem;
+  color: var(--ink-light);
+  line-height: 1.5;
+  margin: 0 !important;
+}
+
+/* CARDS DE DISCIPLINAS */
+#rs-pedagogo .rs-subjects {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#rs-pedagogo .rs-subj-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 18px 24px;
+  background: var(--bg-white);
+  border: 1.5px solid var(--line);
+  border-left: 5px solid var(--teal-border);
+  border-radius: 16px;
+  box-shadow: 0 3px 12px rgba(15, 23, 42, 0.04);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  min-width: 0;
+}
+
+#rs-pedagogo .rs-subj-card:hover {
+  border-color: var(--teal);
+  border-left-color: var(--teal);
+  transform: translateY(-2px) translateX(4px);
+  box-shadow: 0 10px 24px rgba(13, 148, 136, 0.12), 0 3px 8px rgba(0, 0, 0, 0.04);
+}
+
+/* Card Destacado (Específicas de Pedagogia) */
+#rs-pedagogo .rs-subj-card.rs-subj-featured {
+  background: linear-gradient(135deg, #ffffff 0%, #fffef8 100%);
+  border: 1.5px solid var(--gold-border);
+  border-left: 5px solid var(--gold-vibrant);
+  box-shadow: 0 4px 16px rgba(217, 119, 6, 0.08);
+}
+
+#rs-pedagogo .rs-subj-card.rs-subj-featured:hover {
+  border-color: var(--gold-vibrant);
+  border-left-color: var(--gold-vibrant);
+  transform: translateY(-3px) translateX(4px);
+  box-shadow: 0 12px 28px rgba(217, 119, 6, 0.18), 0 3px 8px rgba(0, 0, 0, 0.04);
+}
+
+/* Número do Card */
+#rs-pedagogo .rs-subj-num {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 34px;
-  height: 34px;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
   background: var(--teal-light);
   color: var(--teal-dark);
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   font-weight: 900;
-  border-radius: 8px;
+  border: 1.5px solid var(--teal-border);
+  flex-shrink: 0;
+  letter-spacing: -0.02em;
+  transition: all 0.2s ease;
+}
+
+#rs-pedagogo .rs-subj-card:hover .rs-subj-num {
+  background: var(--teal);
+  color: #ffffff;
+  border-color: var(--teal);
+}
+
+#rs-pedagogo .rs-subj-num.rs-num-gold {
+  background: var(--gold-light);
+  color: #b45309;
+  border-color: var(--gold-border);
+}
+
+#rs-pedagogo .rs-subj-card.rs-subj-featured:hover .rs-subj-num.rs-num-gold {
+  background: var(--gold-vibrant);
+  color: #ffffff;
+  border-color: var(--gold-vibrant);
+}
+
+/* Corpo do Card */
+#rs-pedagogo .rs-subj-body {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+#rs-pedagogo .rs-subj-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#rs-pedagogo .rs-subj-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.70rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--teal-dark);
+  background: var(--teal-light);
   border: 1px solid var(--teal-border);
-  flex: 0 0 34px;
+  border-radius: 6px;
+  padding: 2px 8px;
 }
 
-#rs-pedagogo .rs-subjects h3 {
-  font-size: 1.02rem;
+#rs-pedagogo .rs-subj-badge.rs-badge-gold {
+  color: #92400e;
+  background: #fef3c7;
+  border-color: #fde68a;
+}
+
+#rs-pedagogo .rs-subj-title {
+  font-size: 1.10rem;
+  font-weight: 800;
   color: var(--navy);
+  line-height: 1.35;
+  margin: 2px 0 0 0;
+  letter-spacing: -0.01em;
+  overflow-wrap: break-word;
+  word-break: normal;
 }
 
-#rs-pedagogo .rs-subjects p {
-  font-size: 0.88rem;
-  margin-top: 3px;
+#rs-pedagogo .rs-subj-teacher {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-top: 2px;
+  min-width: 0;
+}
+
+#rs-pedagogo .rs-subj-teacher svg {
+  color: var(--teal);
+  flex-shrink: 0;
+}
+
+#rs-pedagogo .rs-subj-card.rs-subj-featured .rs-subj-teacher svg {
   color: var(--gold);
+}
+
+#rs-pedagogo .rs-subj-teacher span {
   font-weight: 700;
+  color: var(--ink);
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+
+#rs-pedagogo .rs-subj-arrow {
+  font-size: 1.25rem;
+  color: #94a3b8;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  margin-left: 8px;
+  line-height: 1;
+}
+
+#rs-pedagogo .rs-subj-card:hover .rs-subj-arrow {
+  color: var(--teal);
+  transform: translateX(4px);
+}
+
+#rs-pedagogo .rs-subj-card.rs-subj-featured:hover .rs-subj-arrow {
+  color: var(--gold-vibrant);
 }
 
 /* ===================== INSTITUTO (LIGHT LUXURY) ===================== */
@@ -1266,7 +1475,9 @@
   #rs-pedagogo .rs-hero { gap: 36px; }
   #rs-pedagogo .rs-teacher-grid article { grid-template-columns: 1fr; }
   #rs-pedagogo .rs-photo { height: 360px; }
-  #rs-pedagogo .rs-grade { gap: 40px; }
+  #rs-pedagogo .rs-grade { grid-template-columns: 1fr; gap: 36px; }
+  #rs-pedagogo .rs-grade-aside { position: static; }
+  #rs-pedagogo .rs-grade-benefits { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
   #rs-pedagogo .rs-three { gap: 24px; }
 }
 
@@ -1280,7 +1491,21 @@
   #rs-pedagogo .rs-schedule .rs-three > div:first-child { grid-column: 1 / -1; }
   #rs-pedagogo .rs-schedule strong { font-size: 1.75rem; }
   #rs-pedagogo .rs-section { padding-top: 60px; padding-bottom: 60px; }
-  #rs-pedagogo .rs-grade, #rs-pedagogo .rs-faq { grid-template-columns: 1fr; gap: 30px; }
+  #rs-pedagogo .rs-grade { grid-template-columns: 1fr; gap: 28px; }
+  #rs-pedagogo .rs-grade-lead { font-size: 0.95rem; margin-top: 12px; margin-bottom: 18px; }
+  #rs-pedagogo .rs-grade-benefits { grid-template-columns: 1fr; gap: 10px; margin-bottom: 20px; width: 100%; }
+  #rs-pedagogo .rs-gb-item { padding: 12px 14px; gap: 12px; }
+  #rs-pedagogo .rs-gb-item strong { font-size: 0.88rem; }
+  #rs-pedagogo .rs-gb-item p { font-size: 0.78rem; }
+  #rs-pedagogo .rs-subjects { gap: 10px; width: 100%; }
+  #rs-pedagogo .rs-subj-card { padding: 14px 14px; gap: 12px; border-radius: 14px; width: 100%; }
+  #rs-pedagogo .rs-subj-num { width: 36px; height: 36px; font-size: 0.82rem; border-radius: 10px; flex-shrink: 0; }
+  #rs-pedagogo .rs-subj-title { font-size: 0.94rem; line-height: 1.3; }
+  #rs-pedagogo .rs-subj-badge { font-size: 0.65rem; padding: 1px 6px; }
+  #rs-pedagogo .rs-subj-teacher { font-size: 0.76rem; }
+  #rs-pedagogo .rs-subj-arrow { display: none; }
+  #rs-pedagogo .rs-grade-cta .rs-button { width: 100%; box-sizing: border-box; padding: 15px 14px; font-size: 0.86rem; }
+  #rs-pedagogo .rs-faq { grid-template-columns: 1fr; gap: 30px; }
   #rs-pedagogo .rs-teacher-grid { grid-template-columns: 1fr; gap: 25px; }
   #rs-pedagogo .rs-teacher-grid article { grid-template-columns: 40% 1fr; gap: 18px; }
   #rs-pedagogo .rs-photo { height: 230px; }
@@ -1316,7 +1541,7 @@
 <section class="rs-schedule"><div class="rs-wrap rs-three"><div><small>SUA NOVA ROTINA</small><h2>O fim de semana.<br>Um novo começo.</h2></div><div><small>SÁBADOS E DOMINGOS</small><strong>8h às 11h</strong><p>Período da manhã</p></div><div><small>SÁBADOS E DOMINGOS</small><strong>13h às 16h</strong><p>Período da tarde</p></div></div></section>
 <section class="rs-wrap rs-section" id="rs-formatos"><div class="rs-section-head"><p class="rs-eyebrow">COMO VOCÊ VAI ESTUDAR</p><h2>Presença, orientação<br>e espaço para revisar.</h2></div><div class="rs-three rs-formats"><article><span class="rs-number">01</span><h3>Na sala de aula</h3><p>Aulas presenciais na sede do Instituto RS, em Goiânia. Uma rotina de fim de semana para estudar com professores e colegas.</p></article><article><span class="rs-number">02</span><h3>Ao vivo, de onde estiver</h3><p>Acompanhe pela internet na modalidade telepresencial. Consulte a equipe sobre valores e condições de acesso.</p></article><article><span class="rs-number">03</span><h3>Reveja as explicações</h3><p>No presencial, as gravações ficam disponíveis durante a realização da turma. O acesso termina com o encerramento do curso.</p></article></div></section>
 <section class="rs-teachers"><div class="rs-wrap rs-section"><div class="rs-section-head"><p class="rs-eyebrow">QUEM ENSINA FAZ DIFERENÇA</p><h2>Experiência em Educação.<br>Dedicação à sua preparação.</h2></div><div class="rs-teacher-grid"><article><div class="rs-photo"><img loading="lazy" src="rodrigo-gondim.jpg" alt="Professor Rodrigo Gondim" width="480" height="480"></div><div><small>CONHECIMENTOS EDUCACIONAIS E PEDAGOGIA</small><h3>Rodrigo Gondim</h3><p>15 anos preparando professores para concursos públicos. Professor efetivo da rede estadual de ensino de Goiás.</p></div></article><article><div class="rs-photo"><img loading="lazy" src="martinha-simoes.jpg" alt="Professora Martinha Simões" width="480" height="480"></div><div><small>LÍNGUA PORTUGUESA</small><h3>Martinha Simões</h3><p>Mais de 25 anos de experiência, com atuação em gramática, literatura e redação para concursos e vestibulares.</p></div></article></div></div></section>
-<section id="rs-grade" class="rs-wrap rs-section rs-grade"><div><p class="rs-eyebrow">O QUE VOCÊ VAI ESTUDAR</p><h2>Sete disciplinas.<br>Uma preparação<br>com direção.</h2><p>Conheça a grade do curso e os professores que integram a equipe.</p><p class="rs-muted">A distribuição das aulas e a sequência dos conteúdos poderão ser ajustadas conforme a organização pedagógica da turma.</p></div><div class="rs-subjects"><article><span>01</span><div><h3>Língua Portuguesa</h3><p>Martinha Simões / Marina Mesquita</p></div></article><article><span>02</span><div><h3>Redação</h3><p>Marcos Prado / Paulinho Kuririn</p></div></article><article><span>03</span><div><h3>Raciocínio Lógico</h3><p>Jeorge Lima / Vinícius Rufino</p></div></article><article><span>04</span><div><h3>Informática</h3><p>Welington Ribeiro</p></div></article><article><span>05</span><div><h3>Conhecimentos Educacionais</h3><p>Rodrigo Gondim</p></div></article><article><span>06</span><div><h3>Conhecimentos Específicos de Pedagogia</h3><p>Rodrigo Gondim</p></div></article><article><span>07</span><div><h3>Geohistória de Aparecida de Goiânia</h3><p>Leandro Moraes / Addison Luz</p></div></article></div></section><section id="rs-local" class="sec-inst"><div class="container center"><p class="rs-eyebrow">SEU LUGAR PARA ESTUDAR</p><h2 class="sec-title">Conheça o instituto que já ajudou mais de 15 mil alunos a conquistarem a aprovação</h2><p class="sec-sub">Há mais de 10 anos formando aprovados nos principais concursos do Centro-Oeste, o Instituto Rodolfo Souza se tornou referência na preparação de quem busca estabilidade, realização profissional e uma vaga no serviço público.</p><div class="stat-strip"><div class="stat"><div class="n" data-count="15" data-prefix="+" data-suffix=" mil">+15 mil</div><div class="l">alunos aprovados</div></div><div class="stat"><div class="n" data-count="10" data-prefix="+" data-suffix="">+10</div><div class="l">anos de história</div></div><div class="stat"><div class="n" data-count="30" data-prefix="+" data-suffix=" mil">+30 mil</div><div class="l">questões comentadas</div></div></div><div class="inst-photos"><div class="inst-slot"><img src="inst-fachada.webp" alt="Sede do Instituto" loading="lazy" decoding="async"><span class="inst-tag">Sede do Instituto</span></div><div class="inst-slot"><img src="inst-salas.webp" alt="Salas de Aulas" loading="lazy" decoding="async"><span class="inst-tag">Salas de Aulas</span></div><div class="inst-slot"><img src="inst-alunos.webp" alt="Nossos Alunos" loading="lazy" decoding="async"><span class="inst-tag">Nossos Alunos</span></div><div class="inst-slot"><img src="inst-logo.webp" alt="Instituto RS" loading="lazy" decoding="async"><span class="inst-tag">Instituto RS</span></div></div><div class="inst-location"><div class="loc-copy"><span>Onde estudar presencialmente</span><h3>Instituto Rodolfo Souza em Goiânia</h3><p>Av. Araguaia, 286 - Setor Central, Goiânia - GO. Use o mapa para conferir a localização e abrir a melhor rota no Google Maps.</p><div class="loc-actions"><a class="loc-btn primary" href="https://www.google.com/maps/dir/?api=1&destination=-16.6765219%2C-49.2551778&destination_place_id=ChIJwY_4L2LxXpMRDZwXi6nz9Xc" target="_blank" rel="noopener">Traçar rota ↗</a><a class="loc-btn secondary" href="https://maps.app.goo.gl/3BpoRSDovKBLjw8e7" target="_blank" rel="noopener">Abrir no Google Maps ↗</a></div></div><div class="loc-map" aria-label="Prévia do mapa do Instituto Rodolfo Souza em Goiânia"><iframe title="Prévia do mapa do Instituto Rodolfo Souza em Goiânia" src="https://www.openstreetmap.org/export/embed.html?bbox=-49.2652%2C-16.6845%2C-49.2452%2C-16.6685&amp;layer=mapnik&amp;marker=-16.6765219%2C-49.2551778" loading="lazy"></iframe><a class="map-open" href="https://maps.app.goo.gl/3BpoRSDovKBLjw8e7" target="_blank" rel="noopener"><span class="pin"></span><span><strong>Ver localização</strong><small>Toque para abrir a ficha e a rota no Google Maps</small></span></a></div></div><div class="inst-close"><h3>Quando você escolhe o Instituto Rodolfo Souza, não está escolhendo apenas um preparatório.</h3><p>Está escolhendo estudar com uma instituição que já ajudou milhares de candidatos a transformarem o sonho da aprovação em realidade através de uma preparação focada, estratégica e validada por resultados reais.</p></div></div></section>
+<section id="rs-grade" class="rs-wrap rs-section rs-grade"><div class="rs-grade-aside"><p class="rs-eyebrow">GRADE COMPLETA E CORPO DOCENTE</p><h2>Sete disciplinas.<br>Uma preparação<br>com direção.</h2><p class="rs-grade-lead">Estrutura curricular 100% alinhada ao edital da Prefeitura de Aparecida de Goiânia para o cargo de Pedagogo.</p><div class="rs-grade-benefits"><div class="rs-gb-item"><span class="rs-gb-icon" aria-hidden="true">🎯</span><div><strong>Foco Teórico e Prático</strong><p>Teoria direta ao ponto com resolução massiva de questões de bancas de Goiás.</p></div></div><div class="rs-gb-item rs-gb-item-spec"><span class="rs-gb-icon" aria-hidden="true">⭐</span><div><strong>Módulos Específicos com Maior Peso</strong><p>Aprofundamento pedagógico intensivo com o renomado Prof. Rodrigo Gondim.</p></div></div><div class="rs-gb-item"><span class="rs-gb-icon" aria-hidden="true">🔁</span><div><strong>Acesso às Gravações</strong><p>Reveja as aulas durante toda a turma para reforçar os pontos mais importantes.</p></div></div></div><div class="rs-grade-cta"><a class="rs-button" href="#rs-matricula">Quero garantir minha vaga ↗</a><p class="rs-muted">A distribuição das aulas e a sequência dos conteúdos poderão ser ajustadas conforme a organização pedagógica da turma.</p></div></div><div class="rs-subjects"><article class="rs-subj-card"><span class="rs-subj-num">01</span><div class="rs-subj-body"><div class="rs-subj-meta"><span class="rs-subj-badge">Conhecimentos Básicos</span></div><h3 class="rs-subj-title">Língua Portuguesa</h3><div class="rs-subj-teacher"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg><span>Prof. Martinha Simões & Marina Mesquita</span></div></div><span class="rs-subj-arrow" aria-hidden="true">→</span></article><article class="rs-subj-card"><span class="rs-subj-num">02</span><div class="rs-subj-body"><div class="rs-subj-meta"><span class="rs-subj-badge">Conhecimentos Básicos</span></div><h3 class="rs-subj-title">Redação</h3><div class="rs-subj-teacher"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg><span>Prof. Marcos Prado & Paulinho Kuririn</span></div></div><span class="rs-subj-arrow" aria-hidden="true">→</span></article><article class="rs-subj-card"><span class="rs-subj-num">03</span><div class="rs-subj-body"><div class="rs-subj-meta"><span class="rs-subj-badge">Conhecimentos Básicos</span></div><h3 class="rs-subj-title">Raciocínio Lógico</h3><div class="rs-subj-teacher"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg><span>Prof. Jeorge Lima & Vinícius Rufino</span></div></div><span class="rs-subj-arrow" aria-hidden="true">→</span></article><article class="rs-subj-card"><span class="rs-subj-num">04</span><div class="rs-subj-body"><div class="rs-subj-meta"><span class="rs-subj-badge">Conhecimentos Básicos</span></div><h3 class="rs-subj-title">Informática</h3><div class="rs-subj-teacher"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg><span>Prof. Welington Ribeiro</span></div></div><span class="rs-subj-arrow" aria-hidden="true">→</span></article><article class="rs-subj-card rs-subj-featured"><span class="rs-subj-num rs-num-gold">05</span><div class="rs-subj-body"><div class="rs-subj-meta"><span class="rs-subj-badge rs-badge-gold">⭐ Específica · Peso 2</span></div><h3 class="rs-subj-title">Conhecimentos Educacionais</h3><div class="rs-subj-teacher"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg><span>Prof. Rodrigo Gondim</span></div></div><span class="rs-subj-arrow" aria-hidden="true">→</span></article><article class="rs-subj-card rs-subj-featured"><span class="rs-subj-num rs-num-gold">06</span><div class="rs-subj-body"><div class="rs-subj-meta"><span class="rs-subj-badge rs-badge-gold">⭐ Específica · Peso 2</span></div><h3 class="rs-subj-title">Conhecimentos Específicos de Pedagogia</h3><div class="rs-subj-teacher"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg><span>Prof. Rodrigo Gondim</span></div></div><span class="rs-subj-arrow" aria-hidden="true">→</span></article><article class="rs-subj-card"><span class="rs-subj-num">07</span><div class="rs-subj-body"><div class="rs-subj-meta"><span class="rs-subj-badge">Legislação e História Local</span></div><h3 class="rs-subj-title">Geohistória de Aparecida de Goiânia</h3><div class="rs-subj-teacher"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg><span>Prof. Leandro Moraes & Addison Luz</span></div></div><span class="rs-subj-arrow" aria-hidden="true">→</span></article></div></section><section id="rs-local" class="sec-inst"><div class="container center"><p class="rs-eyebrow">SEU LUGAR PARA ESTUDAR</p><h2 class="sec-title">Conheça o instituto que já ajudou mais de 15 mil alunos a conquistarem a aprovação</h2><p class="sec-sub">Há mais de 10 anos formando aprovados nos principais concursos do Centro-Oeste, o Instituto Rodolfo Souza se tornou referência na preparação de quem busca estabilidade, realização profissional e uma vaga no serviço público.</p><div class="stat-strip"><div class="stat"><div class="n" data-count="15" data-prefix="+" data-suffix=" mil">+15 mil</div><div class="l">alunos aprovados</div></div><div class="stat"><div class="n" data-count="10" data-prefix="+" data-suffix="">+10</div><div class="l">anos de história</div></div><div class="stat"><div class="n" data-count="30" data-prefix="+" data-suffix=" mil">+30 mil</div><div class="l">questões comentadas</div></div></div><div class="inst-photos"><div class="inst-slot"><img src="inst-fachada.webp" alt="Sede do Instituto" loading="lazy" decoding="async"><span class="inst-tag">Sede do Instituto</span></div><div class="inst-slot"><img src="inst-salas.webp" alt="Salas de Aulas" loading="lazy" decoding="async"><span class="inst-tag">Salas de Aulas</span></div><div class="inst-slot"><img src="inst-alunos.webp" alt="Nossos Alunos" loading="lazy" decoding="async"><span class="inst-tag">Nossos Alunos</span></div><div class="inst-slot"><img src="inst-logo.webp" alt="Instituto RS" loading="lazy" decoding="async"><span class="inst-tag">Instituto RS</span></div></div><div class="inst-location"><div class="loc-copy"><span>Onde estudar presencialmente</span><h3>Instituto Rodolfo Souza em Goiânia</h3><p>Av. Araguaia, 286 - Setor Central, Goiânia - GO. Use o mapa para conferir a localização e abrir a melhor rota no Google Maps.</p><div class="loc-actions"><a class="loc-btn primary" href="https://www.google.com/maps/dir/?api=1&destination=-16.6765219%2C-49.2551778&destination_place_id=ChIJwY_4L2LxXpMRDZwXi6nz9Xc" target="_blank" rel="noopener">Traçar rota ↗</a><a class="loc-btn secondary" href="https://maps.app.goo.gl/3BpoRSDovKBLjw8e7" target="_blank" rel="noopener">Abrir no Google Maps ↗</a></div></div><div class="loc-map" aria-label="Prévia do mapa do Instituto Rodolfo Souza em Goiânia"><iframe title="Prévia do mapa do Instituto Rodolfo Souza em Goiânia" src="https://www.openstreetmap.org/export/embed.html?bbox=-49.2652%2C-16.6845%2C-49.2452%2C-16.6685&amp;layer=mapnik&amp;marker=-16.6765219%2C-49.2551778" loading="lazy"></iframe><a class="map-open" href="https://maps.app.goo.gl/3BpoRSDovKBLjw8e7" target="_blank" rel="noopener"><span class="pin"></span><span><strong>Ver localização</strong><small>Toque para abrir a ficha e a rota no Google Maps</small></span></a></div></div><div class="inst-close"><h3>Quando você escolhe o Instituto Rodolfo Souza, não está escolhendo apenas um preparatório.</h3><p>Está escolhendo estudar com uma instituição que já ajudou milhares de candidatos a transformarem o sonho da aprovação em realidade através de uma preparação focada, estratégica e validada por resultados reais.</p></div></div></section>
 <section id="rs-investimento" class="rs-wrap rs-section"><div class="rs-section-head"><p class="rs-eyebrow">INVESTIMENTO NO PRESENCIAL</p><h2>Planeje sua preparação.<br>Escolha começar.</h2><p>Confira os lotes da turma presencial. Valores à vista, sujeitos à disponibilidade de vagas.</p></div><div class="rs-three rs-prices" data-lots></div><div class="rs-price-note"><p><strong>Prefere acompanhar ao vivo pela internet?</strong><br>Consulte valores e condições do telepresencial com nossa equipe.</p><a class="rs-button" href="#rs-matricula">Quero informações e matrícula ↗</a></div></section>
 <section class="rs-faq rs-wrap rs-section"><div><p class="rs-eyebrow">ANTES DE COMEÇAR</p><h2>Suas dúvidas,<br>respondidas.</h2></div><div><details><summary>Quando começam as aulas?<span aria-hidden="true">+</span></summary><p>A turma começa em <strong data-start>10 de outubro de 2026</strong>.</p></details><details><summary>Quais são os dias e horários?<span aria-hidden="true">+</span></summary><p>Sábados e domingos, das 8h às 11h e das 13h às 16h. O cronograma poderá sofrer ajustes conforme a organização pedagógica.</p></details><details><summary>Posso acompanhar pela internet?<span aria-hidden="true">+</span></summary><p>Sim. Há modalidade telepresencial, com transmissão ao vivo pela internet. Consulte a equipe sobre valores e condições.</p></details><details><summary>Por quanto tempo posso acessar as gravações?<span aria-hidden="true">+</span></summary><p>No curso presencial, as gravações ficam disponíveis durante a realização da turma. Após o encerramento, não há período adicional de acesso.</p></details><details><summary>Quais disciplinas estão incluídas?<span aria-hidden="true">+</span></summary><p>Língua Portuguesa, Redação, Raciocínio Lógico, Informática, Conhecimentos Educacionais, Conhecimentos Específicos de Pedagogia e Geohistória de Aparecida de Goiânia.</p></details><details><summary>Como faço minha matrícula?<span aria-hidden="true">+</span></summary><p>Preencha o formulário e continue o atendimento pelo WhatsApp oficial. A equipe confirma a disponibilidade de vagas e orienta a matrícula. O cadastro de interesse não equivale à matrícula.</p></details><details><summary>Qual é o valor do curso?<span aria-hidden="true">+</span></summary><p>O lote presencial vigente é de <strong data-current-price></strong> à vista. Os períodos de cada lote estão na seção de investimento. Para o telepresencial, consulte a equipe.</p></details></div></section><section class="rs-final"><div class="rs-wrap"><p class="rs-eyebrow">RS CONCURSOS · JUNTOS PELA EDUCAÇÃO</p><h2>O próximo capítulo<br>começa com você.</h2><p>Professor/Pedagogo · Aparecida de Goiânia<br>Início em <span data-start>10 de outubro de 2026</span></p><a class="rs-button" href="#rs-matricula">Quero informações e matrícula ↗</a></div></section></main><script>(function(){
 'use strict';
