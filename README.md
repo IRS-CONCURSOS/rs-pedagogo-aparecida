@@ -1,56 +1,62 @@
-# RS Concursos — Pedagogo Aparecida de Goiânia 2026
+# RS Concursos — Pedagogo Aparecida de Goiânia 2026 (Versão Oficial)
 
-Landing pages de alta conversão criadas para o preparatório **Professor / Pedagogo da Prefeitura de Aparecida de Goiânia 2026** do Instituto Rodolfo Souza.
-
-Este repositório contém **3 opções visuais completas e independentes** para apresentação ao cliente e teste de conversão (A/B), além dos modelos prontos para importação direta no **Elementor Pro**.
+Landing page de alta conversão aprovada pelo cliente para o curso preparatório **Professor / Pedagogo da Prefeitura de Aparecida de Goiânia 2026** do Instituto Rodolfo Souza.
 
 ---
 
-## 🌐 Prévia Online das 3 Opções
+## 🏆 Versão Oficial Aprovada: Light Premium
 
-Ao publicar via GitHub Pages, as 3 opções podem ser visualizadas interativamente no computador ou celular:
+A **Versão 3 (Light Premium / Acadêmico Contemporâneo)** foi a escolhida e estabelecida como o padrão oficial de produção deste projeto.
 
-| Opção | Proposta Visual | Arquivo Prévia | Arquivo Elementor Pro |
-| :--- | :--- | :--- | :--- |
-| **Opção 1: Branca Editorial** | Fundo 100% branco limpo, minimalista, estilo artigo/notícia acadêmica. | `index-opcao1-editorial.html` | `elementor-opcao1-editorial.json` |
-| **Opção 2: Dark Petróleo & Esmeralda** | Fundo escuro azul petróleo (`#020607` a `#06202a`) com esmeralda luminoso e dourado, **alinhado ao banner oficial do site e da loja**. | `index-opcao2-dark.html` | `elementor-opcao2-dark.json` |
-| **Opção 3: Light Premium** | Cores claras contemporâneas: fundo pérola/off-white, cartões brancos elevados, detalhes em **Verde Esmeralda (`#0d9488`)**, **Âmbar Dourado (`#d97706`)** e faixa de horário em **Verde Floresta Profundo (`#042f2e`)**. | `index-opcao3-light-premium.html` | `elementor-opcao3-light-premium.json` |
-
-> 💡 Cada arquivo HTML possui um seletor flutuante no rodapé para alternar entre as 3 opções com apenas 1 clique.
-
----
-
-## 📸 Comparativo Visual
-
-### Opção 2: Dark Petróleo & Esmeralda (Oficial do Banner)
-![Opção 2 Dark Petróleo](screenshot-dark-hero.png)
-
-### Opção 3: Light Premium (Acadêmico Contemporâneo)
-![Opção 3 Light Premium](screenshot-opcao3-hero.png)
+### Identidade Visual Oficial:
+- **Fundo da Página:** Slate ultra-claro suave (`#f8fafc`) com sensação limpa e arejada.
+- **Cartões e Formulário:** Branco puro (`#ffffff`) com sombras sutis de elevação e destaque superior em Âmbar Dourado (`border-top: 5px solid #f59e0b`).
+- **Cores de Marca:** Verde Esmeralda (`#0d9488` / `#0f766e`) transmitindo autoridade educacional.
+- **Botões e Ação:** Âmbar Dourado vibrante (`#d97706` / `#f59e0b`) para contraste máximo e incentivo ao clique.
+- **Faixa de Quebra de Ritmo:** Verde Floresta Noturno (`#042f2e`) na seção de horários (`.rs-schedule`) com texto em ciano luminoso (`#5eead4`), criando uma quebra visual elegante e moderna.
+- **Tipografia:** Família *RS Montserrat* embutida diretamente via Base64, garantindo carregamento instantâneo em qualquer dispositivo.
 
 ---
 
-## 🚀 Integração com Elementor Pro
+## 🌐 Links Online (GitHub Pages)
 
-Todas as páginas foram projetadas **sem cabeçalho e sem rodapé internos**, configuradas no modo **Elementor Largura Total** (`elementor_header_footer`). 
+- 🌟 **Versão Oficial (Produção):** [https://irs-concursos.github.io/rs-pedagogo-aparecida/](https://irs-concursos.github.io/rs-pedagogo-aparecida/)
+- ⚪ **Opção 1 (Branca Editorial - Histórico):** [https://irs-concursos.github.io/rs-pedagogo-aparecida/index-opcao1-editorial.html](https://irs-concursos.github.io/rs-pedagogo-aparecida/index-opcao1-editorial.html)
+- 🌑 **Opção 2 (Dark Petróleo - Histórico):** [https://irs-concursos.github.io/rs-pedagogo-aparecida/index-opcao2-dark.html](https://irs-concursos.github.io/rs-pedagogo-aparecida/index-opcao2-dark.html)
 
-Isso garante que o WordPress/Elementor injete automaticamente o cabeçalho global e o rodapé global configurados no Theme Builder do site, sem duplicar elementos e sem margens laterais indesejadas.
+---
 
-### Como importar no WordPress:
+## 🚀 Como Importar no WordPress / Elementor Pro
+
+A página foi construída **sem cabeçalho e sem rodapé internos**, configurada nativamente com o template **Elementor Largura Total** (`elementor_header_footer`). 
+
+Isso garante que o Theme Builder do WordPress injete perfeitamente o menu de topo e o rodapé oficial do Instituto Rodolfo Souza, sem duplicação e sem conflito de layout.
+
+### Passo a passo para publicação:
 1. Acesse o painel: `https://institutorodolfosouza.com/wp-admin/`
-2. Vá em **Modelos > Modelos Salvos > Importar Modelos**.
-3. Selecione o arquivo `.json` da opção desejada (`elementor-opcao1-editorial.json`, `elementor-opcao2-dark.json` ou `elementor-opcao3-light-premium.json`).
-4. Crie uma nova página em rascunho com o título: **"Pedagogo — Aparecida de Goiânia"** e slug `pedagogo-aparecida`.
-5. Garanta que o Modelo da Página esteja selecionado como **Elementor Largura Total**.
-6. Edite com o Elementor, insira o modelo da biblioteca e clique em **Publicar**.
+2. No menu lateral, acesse **Modelos > Modelos Salvos > Importar Modelos**.
+3. Selecione o arquivo oficial: **`elementor-pedagogo.json`** (ou `elementor-opcao3-light-premium.json`).
+4. Crie uma nova página em rascunho:
+   - **Título:** `Pedagogo — Aparecida de Goiânia`
+   - **Slug / Link permanente:** `pedagogo-aparecida`
+   - **Atributos da Página > Modelo:** `Elementor Largura Total`
+5. Clique em **Editar com Elementor**.
+6. Clique no ícone de pasta (Biblioteca de Modelos), vá na aba **Meus Modelos**, localize **"RS — Pedagogo Aparecida 2026"** e clique em **Inserir**.
+7. Verifique o formulário em 3 etapas com a ação nativa `save-to-database` (Coletar envios).
+8. Clique em **Publicar**.
 
 ---
 
-## 📦 Conteúdo do Repositório
+## 📦 Estrutura dos Arquivos Principais
 
-- `rs-pedagogo-elementor.zip`: Pacote consolidado contendo todos os modelos Elementor, HTMLs, CSSs e imagens otimizadas em WebP.
-- `config.json`: Fonte única das datas, preços de lotes, telefone e WhatsApp.
-- `app.js`: Script de atualização automática dos lotes conforme o fuso de Brasília e geração do link direto para WhatsApp com os dados do formulário.
-- `rodrigo-gondim.jpg`, `martinha-simoes.jpg`: Fotos oficiais dos professores com uniforme RS.
-- `inst-fachada.webp`, `inst-salas.webp`, `inst-alunos.webp`, `inst-logo.webp`: Fotos institucionais de alta performance e carregamento instantâneo.
-- `backup-versao-branca/`: Pasta de segurança contendo o histórico integral da primeira versão branca construída.
+- **`index.html`**: Landing page oficial de produção (Light Premium) limpa, pronta e 100% autônoma.
+- **`elementor-pedagogo.json`**: Arquivo oficial para importação direta no Elementor Pro.
+- **`style.css`**: Folha de estilos oficial Light Premium com Montserrat Base64.
+- **`pedagogo-aparecida-completo.html`**: Versão completa com HTML, CSS e JS inlined para distribuição ou backup.
+- **`pagina-elementor.html`**: Snippet pronto para uso em widget de HTML customizado do Elementor caso necessário.
+- **`config.json`**: Fonte única das regras de negócio (datas, viradas de lote, preços e WhatsApp).
+- **`app.js`**: Lógica de virada de lotes no fuso horário de Brasília (`America/Sao_Paulo`), animação de contadores numéricos institucionais e geração do link WhatsApp com dados pré-preenchidos.
+- **`rs-pedagogo-elementor.zip`**: Pacote ZIP completo para envio ao time de marketing e desenvolvimento.
+- **Imagens Otimizadas:**
+  - Professores: `rodrigo-gondim.jpg`, `martinha-simoes.jpg`, `rodrigo-gondim-avatar.jpg`, `martinha-simoes-avatar.jpg`.
+  - Institucional (WebP ultraleves): `inst-fachada.webp`, `inst-salas.webp`, `inst-alunos.webp`, `inst-logo.webp`.

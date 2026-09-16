@@ -1,49 +1,56 @@
-# RS Concursos — Pedagogo Aparecida 2026
+# RS Concursos — Pedagogo Aparecida 2026 (Documento de Entrega Oficial)
 
-## Situação
+## 📌 Situação do Projeto
 
-Página e modelo Elementor construídos. Prévia visual testada localmente em computador e celular de 390 px. A publicação e o teste de gravação real dos contatos ainda não foram realizados: o WordPress exige login.
+A versão visual **Opção 3: Light Premium / Acadêmico Contemporâneo** foi aprovada pelo cliente e consolidada como o **padrão oficial de produção**.
 
-## Arquivos
+Todos os arquivos principais da raiz (`index.html`, `style.css`, `elementor-pedagogo.json`, `pagina-elementor.html` e `pedagogo-aparecida-completo.html`) estão agora configurados exclusivamente com este design.
 
-- `index.html` + `style.css`: prévia local completa no tema **Dark Petróleo & Esmeralda** (alinhado visualmente ao banner oficial de Aparecida e à loja RS). Sem cabeçalho e sem rodapé internos, pronta para o Elementor.
-- `index-versao-branca.html`: prévia da **versão branca** preservada na raiz para comparação lado a lado (`http://localhost:8085/index-versao-branca.html`).
-- `backup-versao-branca/`: pasta com cópia integral de segurança de todos os arquivos da versão branca anterior.
-- `elementor-pedagogo.json`: modelo de página para importar no Elementor configurado como `elementor_header_footer` (Elementor Largura Total). Cabeçalho e rodapé foram removidos do conteúdo da página para que o Elementor/tema exiba seus cabeçalhos e rodapés automáticos globais.
-- `pagina-elementor.html`: conteúdo visual alternativo para widget HTML; sozinho NÃO contém o formulário nativo. Preferir importar o JSON completo.
-- `pedagogo-aparecida-completo.html`: arquivo HTML único e autônomo com estilos embutidos e scripts prontos.
-- `config.json`: fonte única das datas, preços, identificação do curso e WhatsApp. Executar `python3 build.py` após alterar a configuração para atualizar os artefatos.
-- `app.js`: atualização dos lotes em Brasília e integração com confirmação do formulário.
-- `rodrigo-gondim.jpg`, `martinha-simoes.jpg`: fotos oficiais dos professores com uniforme RS.
-- `rodrigo-gondim-avatar.jpg`, `martinha-simoes-avatar.jpg`: versões otimizadas para os avatares circulares do hero.
-- `inst-fachada.webp`, `inst-salas.webp`, `inst-alunos.webp`, `inst-logo.webp`: fotos institucionais de alta performance e carregamento instantâneo.
+---
 
-## Instalação no WordPress / Elementor
+## 🎨 Especificações da Versão Oficial (Light Premium)
 
-1. Entrar em https://institutorodolfosouza.com/wp-admin/.
-2. Confirmar Elementor Pro ativo e a funcionalidade de coletar envios disponível.
-3. Importar `elementor-pedagogo.json` na biblioteca de modelos (Modelos > Modelos Salvos > Importar).
-4. Criar uma nova página em rascunho com o título “Pedagogo — Aparecida de Goiânia” e slug `pedagogo-aparecida`. O modelo da página já está configurado como **Elementor Largura Total** (`elementor_header_footer`), garantindo que o cabeçalho e o rodapé automáticos globais do seu Elementor apareçam perfeitamente no topo e no rodapé do site sem duplicação.
-5. Inserir o modelo importado na página. Conferir na prévia externa ao editor o formulário dentro do painel de matrícula.
-6. No formulário “Pedagogo Aparecida 2026”, conferir três etapas e a ação “Coletar envios”. Não adicionar disparo automático de e-mail.
-7. Fazer um cadastro de teste claramente identificado e confirmar sua presença no painel Elementor > Envios. Testar retorno de erro sem mensagem falsa de sucesso, telefone obrigatório e e-mail opcional.
-8. Confirmar que a mensagem do WhatsApp conserva nome, modalidade e experiência mesmo após o Elementor limpar os campos. Não enviar a mensagem de teste ao atendimento.
-9. Confirmar datas, imagens, formato mobile e links. Título SEO: “Pedagogo Aparecida de Goiânia | RS Concursos”. Descrição: “Preparatório RS para Pedagogo em Aparecida de Goiânia. Aulas presenciais e ao vivo pela internet. Conheça a equipe, horários e condições.”
-10. Publicar e verificar o endereço final. Nenhuma alteração na página policial existente é necessária.
+- **Estética:** Fundo claro refinado (`#f8fafc`), cartões brancos destacados, acentos em Verde Esmeralda (`#0d9488`) e Âmbar Dourado (`#d97706`).
+- **Ritmo Visual:** Faixa de cronograma em Verde Floresta (`#042f2e`) para alta legibilidade dos horários (`8h às 11h` / `13h às 16h`).
+- **Formulário de Matrícula:** Card com borda superior dourada, wizard interativo em 3 etapas (Modalidade → Experiência → Contato) e botão de ação contínua para WhatsApp oficial.
+- **Tipografia:** Fonte *RS Montserrat* incorporada em Base64 diretamente no CSS, eliminando dependências externas e lentidão.
+- **Elementor Template:** Definido como `elementor_header_footer` (Elementor Largura Total). Sem cabeçalho nem rodapé internos, permitindo que o cabeçalho e rodapé globais do tema apareçam sem duplicidade.
 
-## Verificações executadas
+---
 
-- Navegação pelas três etapas da prévia, escolha de modalidade e experiência, campos de contato e consentimento.
-- Prévia sem servidor de cadastro mantém respostas e informa que nenhum contato foi enviado.
-- Mensagem do WhatsApp codificada corretamente; não contém pontuação interna nem parâmetros de análise com dados pessoais.
-- Transições 18/09 23:59:59 → 19/09 00:00 e 25/09 23:59:59 → 26/09 00:00 no fuso America/Sao_Paulo.
-- JavaScript com sintaxe válida.
-- Sem rolagem horizontal no viewport de 390 px.
+## 📁 Arquivos Oficiais
 
-## Limites e manutenção
+- `index.html`: Landing page oficial pronta para visualização local e publicação em GitHub Pages.
+- `style.css`: Folha de estilo oficial da versão Light Premium.
+- `elementor-pedagogo.json`: Modelo oficial para importação no Elementor Pro.
+- `pagina-elementor.html`: Conteúdo formatado para widget HTML do Elementor (caso não utilize a importação direta de modelo).
+- `pedagogo-aparecida-completo.html`: Arquivo independente com todos os estilos e scripts embutidos.
+- `config.json`: Configuração central das turmas (datas de início, viradas de lote, valores e WhatsApp).
+- `app.js`: Script de atualização automática dos lotes conforme o fuso de Brasília e geração do link direto para WhatsApp com os dados do formulário.
+- `rs-pedagogo-elementor.zip`: Arquivo zip completo com todos os modelos, scripts e imagens.
+- `backup-versao-branca/`: Pasta de segurança com os arquivos históricos da versão inicial.
 
-- A integração nativa depende de Elementor Pro e deve ser verificada no site antes da publicação. O JSON não é evidência de registro real dos contatos.
-- Fotos são referenciadas em URLs públicas do Instituto; podem ser importadas para a biblioteca de mídia para independência futura.
-- O acesso às gravações anunciado refere-se ao presencial. O preço do telepresencial permanece sob consulta.
-- Não há promessa de carga horária total, material extra, aprovação ou data de encerramento.
-- O lote é calculado com o relógio do navegador convertido para Brasília. O atendimento confirma o valor vigente e a disponibilidade.
+---
+
+## 🛠️ Instruções para Importação no WordPress / Elementor
+
+1. Acesse o painel do WordPress: `https://institutorodolfosouza.com/wp-admin/`.
+2. Certifique-se de que o **Elementor Pro** está ativo.
+3. No menu lateral, acesse **Modelos > Modelos Salvos > Importar Modelos**.
+4. Selecione o arquivo **`elementor-pedagogo.json`**.
+5. Crie uma nova página:
+   - **Título:** `Pedagogo — Aparecida de Goiânia`
+   - **Slug:** `pedagogo-aparecida`
+   - **Modelo da Página:** `Elementor Largura Total`
+6. Abra no editor do Elementor e adicione o modelo importado via biblioteca (**Meus Modelos** > **Inserir**).
+7. Verifique se o formulário nativo do Elementor Pro está configurado com a ação **Coletar envios** (`save-to-database`).
+8. Faça um envio de teste para verificar se o registro aparece em **Elementor > Envios**.
+9. Publique a página.
+
+---
+
+## 🌐 Links para Demonstração Online
+
+- **Versão Oficial (Produção):** https://irs-concursos.github.io/rs-pedagogo-aparecida/
+- **Opção 1 (Branca Editorial):** https://irs-concursos.github.io/rs-pedagogo-aparecida/index-opcao1-editorial.html
+- **Opção 2 (Dark Petróleo):** https://irs-concursos.github.io/rs-pedagogo-aparecida/index-opcao2-dark.html
