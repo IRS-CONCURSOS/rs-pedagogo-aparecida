@@ -1,0 +1,22 @@
+{
+  "course": "Pedagogo Aparecida 2026",
+  "start": "2026-10-10",
+  "phone": "5562991385105",
+  "lots": [
+    {
+      "price": 690,
+      "until": "2026-09-18",
+      "label": "Até 18 de setembro"
+    },
+    {
+      "price": 790,
+      "until": "2026-09-25",
+      "label": "De 19 a 25 de setembro"
+    },
+    {
+      "price": 890,
+      "until": null,
+      "label": "A partir de 26 de setembro"
+    }
+  ]
+}

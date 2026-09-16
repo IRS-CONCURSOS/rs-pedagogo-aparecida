@@ -1,0 +1,16 @@
+# Screenshots temporários pesados
+screenshot-dark-all.png
+screenshot-dark-bottom.png
+screenshot-dark-full.png
+screenshot-dark-lower.png
+screenshot-opcao3-all.png
+
+# Arquivos brutos de extração
+curso.source.html
+teachers.source.html
+martinha-original.png
+sala-check.png
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
